@@ -13,6 +13,7 @@ try:
     input4 = browser.find_element_by_id("country")
     input4.send_keys("Lithuania")
     button = browser.find_element_by_id("submit_button")
+    print(input1)
     button.click()
 
 finally:
