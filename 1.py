@@ -1,13 +1,15 @@
 from selenium import webdriver
+from selenium.webdriver.firefox.firefox_binary import FirefoxBinary
 from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
 import time
 
+binary_argument = FirefoxBinary(r'C:\Program Files (x86)\Mozilla Firefox\firefox.exe')
 link = "http://suninjuly.github.io/simple_form_find_task.html"
 
 capabilities_argument = DesiredCapabilities().FIREFOX
 capabilities_argument["marionette"] = False
 
-browser = webdriver.Firefox(executable_path = 'C:\Tools\WebDriver\geckodriver.exe', capabilities=capabilities_argument)
+browser = webdriver.Firefox(firefox_binary=binary_argument, executable_path = 'C:\Tools\WebDriver\geckodriver.exe', capabilities=capabilities_argument)
 browser.get(link)
 h1 = find_element_by_css_selector("h1").text
 print(h1)
