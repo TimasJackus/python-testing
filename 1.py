@@ -1,7 +1,7 @@
 from selenium import webdriver
 import time
 link = "http://suninjuly.github.io/simple_form_find_task.html"
-browser = webdriver.Firefox()
+browser = webdriver.Firefox(executable_path = 'C:\Tools\WebDriver\geckodriver.exe')
 browser.get(link)
 h1 = find_element_by_css_selector("h1").text
 print(h1)
