@@ -10,9 +10,11 @@ jobs:
     steps:
       - checkout
       - run:
-        command: |
-        - choco install googlechrome
-        - choco install selenium-chrome-driver
+          command: choco install googlechrome
+          name: googlechrome
+      - run:
+          command: choco install selenium-chrome-driver
+          name: selenium-chrome-driver
       - run:
           command: pip install selenium
           name: selenium
