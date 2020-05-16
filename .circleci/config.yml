@@ -16,13 +16,10 @@ jobs:
           command: choco install selenium-chrome-driver
           name: selenium-chrome-driver
       - run:
-          command: pip install unittest
-          name: selenium
-      - run:
           command: pip install selenium
           name: selenium
       - run:
-          command: python 3b.py
+          command: python 1.py
           name: Test
 
 workflows:

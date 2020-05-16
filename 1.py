@@ -2,7 +2,9 @@ from selenium import webdriver
 import time
 link = "http://suninjuly.github.io/simple_form_find_task.html"
 try:
+    print("STARTING CHROME")
     browser = webdriver.Chrome()
+    print("CHROME STARTED...")
     browser.get(link)
     input1 = browser.find_element_by_name("first_name")
     input1.send_keys("Timas")
