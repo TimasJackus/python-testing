@@ -3,16 +3,16 @@ version: 2.1
 orbs:
   win: circleci/windows@2.2.0
   python: circleci/python@0.2.1
-  browser-tools: circleci/browser-tools@1.0.0
 
 jobs:
   build-and-test:
     executor: win/default
     steps:
       - checkout
-      - browser-tools/install-browser-tools
-      - browser-tools/install-chrome
-      - browser-tools/install-chromedriver
+      - run:
+        command: |
+        - choco install googlechrome
+        - choco install selenium-chrome-driver
       - run:
           command: pip install selenium
           name: selenium
