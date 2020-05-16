@@ -1,6 +1,6 @@
 from selenium import webdriver
 import time
-link = "https://cntr.click/0zxW7QR"
+link = "https://cntr.click/LgFph65"
 print("STARTING CHROME")
 browser = webdriver.Chrome()
 print("CHROME STARTED...")
