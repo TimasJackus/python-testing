@@ -16,7 +16,7 @@ try:
     input4.send_keys("Lithuania")
     button = browser.find_element_by_id("submit_button")
     button.click()
-    h1 = find_element_by_css_selector("h1").text
+    h1 = browser.find_element_by_css_selector("h1").text
     print(h1)
 
 finally:
