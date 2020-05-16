@@ -2,9 +2,9 @@ from selenium import webdriver
 import time
 link = "https://cntr.click/0zxW7QR"
 print("STARTING CHROME")
-# browser = webdriver.Chrome()
+browser = webdriver.Chrome()
 print("CHROME STARTED...")
-# browser.get(link)
+browser.get(link)
 # # input1 = browser.find_element_by_name("first_name")
 # # input1.send_keys("Timas")
 # # input2 = browser.find_element_by_name("last_name")
